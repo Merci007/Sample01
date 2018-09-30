@@ -2,30 +2,29 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
+<link href="/css/base001.css" th:href="@{/css/base001.css}" rel="stylesheet"></link>
 <link href="/css/slide.css" th:href="@{/css/slide.css}" rel="stylesheet"></link>
 <script src="/js/jquery-3.3.1.js" th:src="@{/js/jquery-3.3.1.js}"></script>
-<script src="/js/footerFixed.js" th:src="@{/js/footerFixed.js}"></script>
 <script src="/js/slide.js" th:src="@{/js/slide.js}"></script>
 <title>HOME</title>
 </head>
 <body>
-<div th:include="main/headerTest :: header_HOME"></div>
-
-<div id="slideshow">
-	<p class="active">
-		<a href="#"><img src="/picture/img1.jpg" alt="" /></a>
-		画像1
-	</p>
-	<p>
-		<a href="#"><img src="/picture/img2.jpg" alt="" /></a>
-		画像2
-	</p>
-	<p>
-		<a href="#"><img src="/picture/img3.jpg" alt="" /></a>
-		画像3
-	</p>
-</div>
-
-<div id="footer" th:include="main/footerTest :: footer_HOME"></div>
+	<div id="container">
+		<div th:include="main/headerTest :: header_HOME"></div>
+		<div id="main">
+			<div id="slideshow">
+				<p class="active">
+					<a href="#"><img src="/picture/img1.jpg" alt="" /></a> 画像1
+				</p>
+				<p>
+					<a href="#"><img src="/picture/img2.jpg" alt="" /></a> 画像2
+				</p>
+				<p>
+					<a href="#"><img src="/picture/img3.jpg" alt="" /></a> 画像3
+				</p>
+			</div>
+		</div>
+		<div th:include="main/footerTest :: footer_HOME"></div>
+	</div>
 </body>
 </html>
