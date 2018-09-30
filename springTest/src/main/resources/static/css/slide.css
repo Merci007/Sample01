@@ -1,0 +1,34 @@
+/*
+
+*/
+
+#slideshow {
+	position: relative;
+	width:  400px;
+	height: 300px;
+	margin: 0 auto;
+	padding-bottom:50px;
+}
+
+#slideshow p {
+	position: absolute;
+	z-index: 0;
+	opacity: 0.0;
+	background-color: white;
+}
+
+#slideshow p.active {
+	z-index: 10;
+	opacity: 1.0;
+}
+
+#slideshow p.last-active {
+	z-index: 9;
+}
+
+#slideshow p img {
+	width: 400px;
+	height: 300px;
+	display: block;
+	border: 0;
+}
